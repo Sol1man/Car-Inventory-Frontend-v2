@@ -1,3 +1,4 @@
+<div *ngIf="dataSource?.data?.length; else loading">
 <table mat-table [dataSource]="dataSource">
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>   
@@ -11,3 +12,7 @@
   
     
   </table>
+</div>
+  <ng-template #loading>
+      <p>Loading...</p>
+  </ng-template>
