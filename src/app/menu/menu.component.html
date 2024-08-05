@@ -1,11 +1,12 @@
-
-<mat-tab-group>
-    <mat-tab label="All Cars">
-      <router-outlet></router-outlet>
-    </mat-tab>
-    <mat-tab label="About">
-      </mat-tab>
-    <mat-tab label="Create Car">
-      </mat-tab>
-  </mat-tab-group>
-  
+<mat-tab-group class="menu">
+  <mat-tab label="All Cars">
+    <app-car-list></app-car-list>
+  </mat-tab>
+  <mat-tab label="About">
+    <div class="content">
+      <h1 class="header">The Wheel Deal</h1>
+      <p>The perfect place to find your dream car.</p>
+    </div>
+  </mat-tab>
+  <mat-tab label="Create Car"> </mat-tab>
+</mat-tab-group>
