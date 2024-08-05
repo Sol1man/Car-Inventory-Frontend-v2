@@ -1,5 +1,5 @@
 <div *ngIf="dataSource?.data?.length; else loading">
-<table mat-table [dataSource]="dataSource">
+<table mat-table [dataSource]="dataSource" class="demo-table" >
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>   
 
@@ -10,7 +10,6 @@
    car">{{ car[column] }}</td>
     </ng-container>
   
-    
   </table>
 </div>
   <ng-template #loading>

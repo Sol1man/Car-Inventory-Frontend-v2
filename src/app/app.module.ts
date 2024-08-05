@@ -12,7 +12,8 @@ import {MatTableModule}   from '@angular/material/table';
 import { CarTableComponent } from './car-table/car-table.component';
 import { MatTableDataSource } from '@angular/material/table';
 
-
+import { MenuComponent } from './menu/menu.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 @NgModule({
@@ -20,13 +21,14 @@ import { MatTableDataSource } from '@angular/material/table';
     AppComponent,
     CarListComponent,
     CarTableComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
-    
+    MatTabsModule,
   ],
   providers: [
     CarService,
