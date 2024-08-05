@@ -179,8 +179,20 @@
 
 <main class="main">
   <div class="content">
-    <app-menu></app-menu>
-    <!-- <app-car-list></app-car-list>    -->
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav mode="side" opened>
+        <app-side-menu></app-side-menu>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <mat-toolbar color="primary"> </mat-toolbar>
+        <div class="main-content">
+          <router-outlet></router-outlet>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+    <!-- <app-side-menu></app-side-menu> -->
+    <!-- <app-menu></app-menu> -->
   </div>
 </main>
 

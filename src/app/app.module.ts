@@ -22,12 +22,18 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 import { AddCarComponent } from './add-car/add-car.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+
 @NgModule({
   declarations: [
     AppComponent,
     CarListComponent,
     CarTableComponent,
     MenuComponent,
+
     SideMenuComponent,
     AddCarComponent,
     AboutPageComponent,
@@ -39,6 +45,12 @@ import { AboutPageComponent } from './about-page/about-page.component';
     HttpClientModule,
     MatTableModule,
     MatTabsModule,
+
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    AppRoutingModule,
   ],
   providers: [CarService, provideClientHydration()],
   bootstrap: [AppComponent],
