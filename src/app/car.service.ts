@@ -10,12 +10,18 @@ import { AppComponent } from './app.component';
 import { CarListComponent } from './car-list/car-list.component'; // Import CarListComponent
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CarService {
-  private apiurl = "http://localhost:5023/car"
+  private apiurl = 'http://localhost:5023/car';
   constructor(private http: HttpClient) {}
   getAllCars(): Observable<car[]> {
     return this.http.get<car[]>(this.apiurl);
-   }
+  }
+  addCar(carToAdd: car): Observable<car> {
+    return this.http.post<car>(`${this.apiurl}/AddCar`, carToAdd);
+  }
+  deleteCar(carId: number): Observable<number> {
+    return this.http.delete<number>(`${this.apiurl}/delete/${carId}`);
+  }
 }

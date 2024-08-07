@@ -1,1 +1,32 @@
-<p>add-car works!</p>
+<h1 style="text-align: center">Add a New Car</h1>
+
+<mat-card>
+  <mat-card-title>New Car Details</mat-card-title>
+  <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Name" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Color</mat-label>
+      <input matInput formControlName="color" placeholder="Color" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Type</mat-label>
+      <input matInput formControlName="type" placeholder="Type" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Year</mat-label>
+      <input matInput formControlName="year" placeholder="Year" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Price</mat-label>
+      <input matInput formControlName="price" placeholder="Price" required />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Create Car</button>
+  </form>
+</mat-card>
