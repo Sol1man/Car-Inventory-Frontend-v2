@@ -33,6 +33,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { MatInputModule } from '@angular/material/input';
+import { DeleteButtonComponent } from './delete-button/delete-button.component';
+import { EditButtonComponent } from './edit-button/edit-button.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,8 @@ import { MatInputModule } from '@angular/material/input';
     SideMenuComponent,
     AddCarComponent,
     AboutPageComponent,
+    DeleteButtonComponent,
+    EditButtonComponent,
   ],
   imports: [
     BrowserModule,

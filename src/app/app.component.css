@@ -9,6 +9,7 @@
 
 .mat-sidenav {
   width: 240px; /* Adjust the width as needed */
+  height: 100%;
 }
 
 .mat-toolbar {
